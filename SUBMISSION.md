@@ -4,6 +4,8 @@
 
 **Track:** Build with `buy` (HTTP 402 service). USD₮ x402 Open Corridors is *planned* and not entered, because it is judged on mainnet volume and there is no mainnet activity.
 
+**Live App URL:** https://celo-open-rails-ap-check.vercel.app
+
 **Public repo:** https://github.com/Cubiczan/celo-open-rails-ap-check
 
 **Agent (buyer) wallet:** 0xAdcFF27739dacbA09e6169E4c38fBaA8dB1d0BB8 (Celo Sepolia testnet only)

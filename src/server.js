@@ -31,7 +31,9 @@ async function verify(txHash) {
   return { txHash, block: rc.blockNumber.toString(), from: rc.from };
 }
 const app = express(); app.use(express.json());
-app.get("/", (_, res) => res.json({ service: "Open Rails CFO AP-check", network: cfg.net.name, price: cfg.price, asset: cfg.asset, payTo: cfg.payTo }));
+app.get("/", (_, res) => res.type("html").send(require("./landing")));
+app.get("/api/info", (_, res) => res.json({ service: "Open Rails CFO AP-check", network: cfg.net.name, price: cfg.price, asset: cfg.asset, payTo: cfg.payTo }));
+app.get("/ap-check", (req, res) => res.status(402).json(requirements(req.originalUrl)));
 app.post("/ap-check", async (req, res) => {
   const hdr = req.get("X-PAYMENT");
   if (!hdr) return res.status(402).json(requirements(req.originalUrl));
@@ -43,4 +45,5 @@ app.post("/ap-check", async (req, res) => {
   } catch (e) { res.status(402).json({ error: e.message, ...requirements(req.originalUrl) }); }
 });
 if (require.main === module) { if (!cfg.payTo) throw new Error("set PAY_TO"); app.listen(process.env.PORT || 4021, () => console.log(`AP-check on ${cfg.net.name} :${process.env.PORT || 4021}`)); }
-module.exports = { app, verify };
+app.app = app; app.verify = verify;
+module.exports = app;

@@ -28,6 +28,11 @@ NETWORK=mainnet PAY_ASSET=0x48065fbBE25f71C9282ddf5e1cD6D6A887483D5e PAY_DECIMAL
 ```
 Keys only ever come from an env var or a key file. They are never logged.
 
+## Live demo
+https://celo-open-rails-ap-check.vercel.app (Celo Sepolia, no keys on the server). `GET` or `POST /ap-check` without payment returns the 402 terms.
+
+![landing](docs/landing.png)
+
 ## Status (testnet proof only)
 - **Done:** unit tests pass. On Celo Sepolia, 3 calls were paid in native CELO, one each for APPROVE, REVIEW and HOLD. Resubmitting a used payment was refused with `402 payment already used`. Hashes are in [`PROOF.md`](PROOF.md).
 - **Not done:** mainnet payments, ERC-8004 Agent ID registration, and the ERC-8021 attribution tag. No mainnet transactions exist yet.
