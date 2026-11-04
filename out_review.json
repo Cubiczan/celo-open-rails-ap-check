@@ -1,0 +1,17 @@
+{
+  "decision": "REVIEW",
+  "risk_score": 1,
+  "flags": [
+    {
+      "code": "ROUND_AMOUNT",
+      "msg": "large round-dollar amount"
+    }
+  ],
+  "computed_subtotal": 10000,
+  "payment": {
+    "txHash": "0xd8c3425db347afc45fc32b5543419e69727bade328212777162feab1ab0b3772",
+    "block": "40513962",
+    "from": "0xadcff27739dacba09e6169e4c38fbaa8db1d0bb8",
+    "explorer": "https://celo-sepolia.blockscout.com/tx/0xd8c3425db347afc45fc32b5543419e69727bade328212777162feab1ab0b3772"
+  }
+}

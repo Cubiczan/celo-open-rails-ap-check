@@ -1,0 +1,22 @@
+{
+  "decision": "HOLD",
+  "risk_score": 4,
+  "flags": [
+    {
+      "code": "LINE_MATH",
+      "line": 0,
+      "msg": "qty*price 2500 != 2400"
+    },
+    {
+      "code": "PO_OVERRUN",
+      "msg": "total exceeds PO by >5%"
+    }
+  ],
+  "computed_subtotal": 2810,
+  "payment": {
+    "txHash": "0xe9337432dc8a2ab515f658b4be58839a4b3b15a7bf0d8a144a8b418cea233ca4",
+    "block": "40513967",
+    "from": "0xadcff27739dacba09e6169e4c38fbaa8db1d0bb8",
+    "explorer": "https://celo-sepolia.blockscout.com/tx/0xe9337432dc8a2ab515f658b4be58839a4b3b15a7bf0d8a144a8b418cea233ca4"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "decision": "APPROVE",
+  "risk_score": 0,
+  "flags": [],
+  "computed_subtotal": 125,
+  "payment": {
+    "txHash": "0x1a07bf0379f690f527126968e473b86ab1d974ddb737b4a51d56712071351498",
+    "block": "40513956",
+    "from": "0xadcff27739dacba09e6169e4c38fbaa8db1d0bb8",
+    "explorer": "https://celo-sepolia.blockscout.com/tx/0x1a07bf0379f690f527126968e473b86ab1d974ddb737b4a51d56712071351498"
+  }
+}

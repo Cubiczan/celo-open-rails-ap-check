@@ -1,0 +1,10 @@
+HTTP/1.1 402 Payment Required
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 339
+ETag: W/"153-P02vtcmYVa3Cco3UH+w/PdaCKe4"
+Date: Wed, 04 Nov 2026 13:12:22 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"x402Version":1,"accepts":[{"scheme":"exact","network":"celo-sepolia","chainId":11142220,"maxAmountRequired":"1000000000000000","asset":"native","payTo":"0xF9b1A20C6ef13F693CA1FA0E834A1ce956677519","resource":"/ap-check","description":"CFO AP invoice check (1 call)","mimeType":"application/json","settlement":"direct-onchain-transfer"}]}

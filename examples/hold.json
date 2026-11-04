@@ -1,0 +1,2 @@
+{"vendor":"Acme Freight LLC","invoice_no":"INV-1042","invoice_date":"2026-11-01","due_date":"2026-12-01","bank_account":"US-XX-0000",
+ "lines":[{"desc":"Linehaul","qty":2,"unit_price":1250,"amount":2400},{"desc":"Fuel","qty":1,"unit_price":310,"amount":310}],"subtotal":2810,"tax":224.8,"total":3034.8,"po_total":2500}

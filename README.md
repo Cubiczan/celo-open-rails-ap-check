@@ -29,5 +29,14 @@ NETWORK=mainnet PAY_ASSET=0x48065fbBE25f71C9282ddf5e1cD6D6A887483D5e PAY_DECIMAL
 Keys only ever come from an env var or a key file. They are never logged.
 
 ## Status
-- Unit tests and the 402 handshake pass locally.
-- Testnet and mainnet tx hashes: see `PROOF.md` (added once runs are done).
+- Unit tests pass. A live Celo Sepolia run paid 3 calls (APPROVE / REVIEW / HOLD), and a replayed payment was rejected. Hashes are in [`PROOF.md`](PROOF.md).
+- Mainnet: pending.
+
+## Screenshots
+402 challenge, then the paid calls (Celo Sepolia):
+
+![terminal](docs/terminal.png)
+
+HOLD-case payment on the Celo Sepolia explorer:
+
+![explorer](docs/explorer.png)
