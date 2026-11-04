@@ -1,6 +1,6 @@
 # Open Rails AP-Check: a pay-per-call CFO agent service on Celo (HTTP 402)
 
-An agent-to-agent service: send an invoice as JSON and get back an accounts-payable control decision (**APPROVE / REVIEW / HOLD**) with flags. Each call is paid with an HTTP 402 flow settled on Celo. Built for Celo **Agents on Open Rails** ("Build with `buy`" track; USD₮ settlement-ready for Open Corridors).
+An agent-to-agent service: send an invoice as JSON and get back an accounts-payable control decision (**APPROVE / REVIEW / HOLD**) with flags. Each call is paid with an HTTP 402 flow settled on Celo. Built for Celo **Agents on Open Rails**, "Build with `buy`" track. USD₮/Open Corridors is planned and not entered.
 
 Built by Shyam Desigan (CFO, Cubiczan). These are the checks a CFO runs before releasing a payment.
 
@@ -28,9 +28,10 @@ NETWORK=mainnet PAY_ASSET=0x48065fbBE25f71C9282ddf5e1cD6D6A887483D5e PAY_DECIMAL
 ```
 Keys only ever come from an env var or a key file. They are never logged.
 
-## Status
-- Unit tests pass. A live Celo Sepolia run paid 3 calls (APPROVE / REVIEW / HOLD), and a replayed payment was rejected. Hashes are in [`PROOF.md`](PROOF.md).
-- Mainnet: pending.
+## Status (testnet proof only)
+- **Done:** unit tests pass. On Celo Sepolia, 3 calls were paid in native CELO, one each for APPROVE, REVIEW and HOLD. Resubmitting a used payment was refused with `402 payment already used`. Hashes are in [`PROOF.md`](PROOF.md).
+- **Not done:** mainnet payments, ERC-8004 Agent ID registration, and the ERC-8021 attribution tag. No mainnet transactions exist yet.
+- **Planned:** mainnet USD₮ settlement through the Celo x402 facilitator (EIP-3009, gasless). The code is already switchable to mainnet by config (see Run).
 
 ## Screenshots
 402 challenge, then the paid calls (Celo Sepolia):
